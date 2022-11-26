@@ -8,9 +8,11 @@ namespace Space.Objects
 {
     public class Comet
     {
-        public int Width { get; set; } = 200;
-        public int Height { get; set; } = 200;
+        private PictureBox _body = new PictureBox();
+        private Form _container;
+        private Point _startLocationPoint;
+        public int Width { get; set; } = 100;
+        public int Height { get; set; } = 100;
         public int Speed { get; set; }
-
     }
 }

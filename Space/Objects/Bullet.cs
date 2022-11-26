@@ -10,30 +10,31 @@ namespace Space.Objects
     public class Bullet
     {
         object locker = new();
+        private PictureBox _body = new PictureBox();
+        private Point _startLocationPoint;
         public int Damage { get; set; }
         public int Speed { get; set; } = 60;
         public int Width { get; set; } = 10;
         public int Height { get; set; } = 10;
-        private PictureBox Body { get; set; } = new PictureBox();
-        public Point StartLocationPoint { get; set; }
+
 
         public Bullet(Point startLocation)
         {
-            StartLocationPoint = startLocation;
+            _startLocationPoint = startLocation;
             InicializeObject();
         }
 
         private void InicializeObject()
         {
-            Body.Image = Image.FromFile(Path.Join(Directory.GetCurrentDirectory(), @"/Images/bullet.png"));
+            _body.Image = Image.FromFile(Path.Join(Directory.GetCurrentDirectory(), @"/Images/bullet.png"));
 
-            Body.Location = StartLocationPoint;
-            Body.SizeMode = PictureBoxSizeMode.StretchImage;
-            Body.Width = Width;
-            Body.Height = Height;
-            
+            _body.Location = _startLocationPoint;
+            _body.SizeMode = PictureBoxSizeMode.StretchImage;
+            _body.Width = Width;
+            _body.Height = Height;
         }
-        //TODO Должны будут скинуть!! Если не скинут всем +50 баллов
+
+        //TODO Тимерхан Аглямович должен будет скинуть!! В случае не выполнения всем студентам +50 баллов
         public void Draw()
         {
             //lock (locker)
@@ -47,9 +48,10 @@ namespace Space.Objects
             //    }
             //}
         }
+
         public PictureBox GetObject()
         {
-            return Body;
+            return _body;
         }
     }
 }
