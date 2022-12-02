@@ -8,19 +8,19 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Gleb\\.nuget\\packages\\": {}
+    "C:\\Users\\gleb\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gleb\\Desktop\\Прога\\2КУРС\\WEB\\Space\\Space\\Space.csproj",
+      "projectUniqueName": "C:\\Users\\gleb\\Desktop\\Прога\\2КУРС\\WEB\\Space\\Space\\Space.csproj",
       "projectName": "Space",
-      "projectPath": "C:\\Users\\Gleb\\Desktop\\Прога\\2КУРС\\WEB\\Space\\Space\\Space.csproj",
-      "packagesPath": "C:\\Users\\Gleb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gleb\\Desktop\\Прога\\2КУРС\\WEB\\Space\\Space\\obj\\",
+      "projectPath": "C:\\Users\\gleb\\Desktop\\Прога\\2КУРС\\WEB\\Space\\Space\\Space.csproj",
+      "packagesPath": "C:\\Users\\gleb\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gleb\\Desktop\\Прога\\2КУРС\\WEB\\Space\\Space\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Gleb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gleb\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

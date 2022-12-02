@@ -52,19 +52,31 @@ namespace Space.Objects
         {
             _body.Location = new Point(_body.Location.X - Speed, _body.Location.Y);
         }
-        public void MoveRight()
+        public  void MoveRight()
         {
             _body.Location = new Point(_body.Location.X + Speed, _body.Location.Y);
         }
-        public void Fire()
+        public async void Fire()
         {
             var bullet = new Bullet(_body.Location);
+            Point bPos = new Point();
 
+            while(bullet.Draw().Location.Y > 0)
+            {
+                await Task.Run(() =>
+                {
+                    bPos = BulletFall(bullet);
+                    Thread.Sleep(2);
+                });
+                bullet.Draw().Location = bPos;
+                _container.Controls.Add(bullet.GetObject());                
+            }
             _bullets.Add(bullet);
-            _container.Controls.Add(bullet.GetObject());
-
-            Thread thread = new Thread(bullet.Draw);
-            thread.Start();
+            _container.Controls.Remove(bullet.GetObject());
+        }
+        private Point BulletFall(Bullet bullet)
+        {
+            return new Point(bullet.Draw().Location.X, bullet.Draw().Location.Y - bullet.Speed);
         }
     }
 }

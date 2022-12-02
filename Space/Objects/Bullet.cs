@@ -9,11 +9,10 @@ namespace Space.Objects
 {
     public class Bullet
     {
-        object locker = new();
         private PictureBox _body = new PictureBox();
         private Point _startLocationPoint;
         public int Damage { get; set; }
-        public int Speed { get; set; } = 60;
+        public int Speed { get; set; } = 20;
         public int Width { get; set; } = 10;
         public int Height { get; set; } = 10;
 
@@ -35,18 +34,9 @@ namespace Space.Objects
         }
 
         //TODO Тимерхан Аглямович должен будет скинуть!! В случае не выполнения всем студентам +50 баллов
-        public void Draw()
+        public PictureBox Draw()
         {
-            //lock (locker)
-            //{
-            //    int i = 0;
-            //    while (i <= 20)
-            //    {
-            //        Body.Location = new Point(Body.Location.X, Body.Location.Y - Speed);
-            //        Thread.Sleep(100);
-            //        i++;
-            //    }
-            //}
+            return _body;
         }
 
         public PictureBox GetObject()
